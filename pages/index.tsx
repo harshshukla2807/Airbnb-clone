@@ -49,7 +49,7 @@ export default function Home({ exploreData,cardsData }: any) {
               
               <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
                 {cardsData.map((item:any)=>(
-                  <MediumCard img={item.img} title={item.title}/>
+                  <MediumCard key={item.img} img={item.img} title={item.title}/>
                 ))}  
               </div>
         </section> 

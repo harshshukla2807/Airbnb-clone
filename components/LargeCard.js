@@ -9,6 +9,7 @@ function LargeCard({img,title,description,buttonText}) {
             src={img}
             fill
             className='rounded-2xl'
+            alt='an image'
             />
     </div>
     
