@@ -20,7 +20,7 @@ export default function Home({ exploreData,cardsData }: any) {
         <title>Airbnb</title>
       </Head>
 
-      <Header />
+      <Header/>
       {/* {banner} */}
       <Banner />
     
