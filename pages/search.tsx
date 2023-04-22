@@ -8,7 +8,7 @@ import InfoCard from "../components/InfoCard";
 
 function search({ searchResults }) {
   const router = useRouter();
-  console.log(router.query);
+  // console.log(router.query);
   const { location, startDate, endDate, noOfGuests } = router.query;
 
   const startDateString = Array.isArray(startDate) ? startDate[0] : startDate;
