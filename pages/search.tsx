@@ -6,7 +6,7 @@ import React from "react";
 import dateFormat, { masks } from "dateformat";
 import InfoCard from "../components/InfoCard";
 
-function search({ searchResults }: { searchResults: any }) {
+function Search({ searchResults }: { searchResults: any }) {
   const router = useRouter();
   // console.log(router.query);
   const { location, startDate, endDate, noOfGuests } = router.query;
@@ -70,7 +70,7 @@ function search({ searchResults }: { searchResults: any }) {
   );
 }
 
-export default search;
+export default Search;
 
 export async function getServerSideProps() {
   const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").then(
