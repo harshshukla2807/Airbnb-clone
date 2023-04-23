@@ -5,11 +5,18 @@ import { compareAsc, format } from "date-fns";
 import React from "react";
 import dateFormat, { masks } from "dateformat";
 import InfoCard from "../components/InfoCard";
+// import Map from "../components/Map";
+import dynamic from 'next/dynamic'
+
 
 function Search({ searchResults }: { searchResults: any }) {
   const router = useRouter();
   // console.log(router.query);
   const { location, startDate, endDate, noOfGuests } = router.query;
+  
+  const Map = dynamic(() => import('../components/Map'), {
+    ssr: false
+  });
 
   const startDateString = Array.isArray(startDate) ? startDate[0] : startDate;
   const formattedStartDate = startDateString
@@ -30,7 +37,10 @@ function Search({ searchResults }: { searchResults: any }) {
 
   return (
     <div>
-      <Header placeholder={`${location} | ${range} | ${noOfGuests}`} />
+   
+        <Header placeholder={`${location} | ${range} | ${noOfGuests}`}/>
+ 
+   
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
@@ -63,6 +73,10 @@ function Search({ searchResults }: { searchResults: any }) {
               />
             ))}
           </div>
+        </section>
+        
+        <section className="hidden xl:inline-flex min-w-[600px] z-0">
+              <Map searchResults={searchResults}/>
         </section>
       </main>
       <Footer />
