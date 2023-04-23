@@ -43,9 +43,9 @@ function Map({searchResults}) {
   style={{ height: "100%", width: "100%" }}
     >
     
-    {searchResults.map((result)=>(
-        <div className=''>
-        <Marker  position={[result.lat, result.long]} draggable={true} animate={true} icon={myIcon} > 
+    {searchResults.map((result)=>( 
+        <div key={result.lat}>
+        <Marker position={[result.lat, result.long]} draggable={true} animate={true} icon={myIcon} > 
         
         <Popup >{result.title}</Popup>
       </Marker>
