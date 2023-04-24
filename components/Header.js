@@ -56,7 +56,7 @@ function Header(props) {
   }
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-5 py-5 md:px-10">
+    <header className="sticky top-0 z-50 flex justify-between  flex-wrap md:grid md:grid-cols-3 bg-white shadow-md px-5 py-5 w-auto md:px-10 ">
       {/* left  airbnb img*/}
       <div
       onClick={()=>router.push('/')}
@@ -89,7 +89,7 @@ function Header(props) {
 
       {/* right  */}
 
-      <div className="flex items-center space-x-4 justify-end text-gray-500">
+      <div className="flex items-center space-x-4 justify-end  text-gray-500">
         <p className="hidden md:inline cursor-pointer">Become a host</p>
         <GlobeAltIcon className="h-6" />
 

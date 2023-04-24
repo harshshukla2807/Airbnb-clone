@@ -42,7 +42,7 @@ function Search({ searchResults }: { searchResults: any }) {
  
    
       <main className="flex">
-        <section className="flex-grow pt-14 px-6">
+        <section className="flex-grow pt-14 px-6 w-full">
           <p className="text-xs">
             {" "}
             400+ stays {range} and {noOfGuests} number of guests.
